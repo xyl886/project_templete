@@ -1,11 +1,9 @@
 import json
 
-from django.contrib.auth import authenticate, login as auth_login
-from django.contrib.auth.models import User
-from django.views.decorators.csrf import csrf_exempt
-
 from auth2.utils import generate_jwt_token
 from common.response import Result
+from django.contrib.auth.models import User
+from django.views.decorators.csrf import csrf_exempt
 from loguru import logger
 
 
