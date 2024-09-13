@@ -1,0 +1,520 @@
+INFO 2024-08-15 14:04:59,258 autoreload Watching for file changes with StatReloader
+INFO 2024-08-15 14:04:59,917 autoreload Watching for file changes with StatReloader
+INFO 2024-08-15 14:05:14,588 basehttp "OPTIONS /login HTTP/1.1" 200 0
+WARNING 2024-08-15 14:05:14,624 log Not Found: /login
+WARNING 2024-08-15 14:05:14,625 basehttp "POST /login HTTP/1.1" 404 2099
+INFO 2024-08-15 14:05:37,145 basehttp "OPTIONS /admin/login HTTP/1.1" 200 0
+ERROR 2024-08-15 14:05:37,238 log Internal Server Error: /admin/login
+Traceback (most recent call last):
+  File "D:\soft\python3.11.4\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\soft\python3.11.4\Lib\site-packages\django\utils\deprecation.py", line 136, in __call__
+    response = self.process_response(request, response)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\soft\python3.11.4\Lib\site-packages\django\middleware\common.py", line 108, in process_response
+    return self.response_redirect_class(self.get_full_path_with_slash(request))
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\soft\python3.11.4\Lib\site-packages\django\middleware\common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8000/admin/login/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+ERROR 2024-08-15 14:05:37,242 basehttp "POST /admin/login HTTP/1.1" 500 77759
+INFO 2024-08-15 14:08:11,726 autoreload D:\soft\pythonProject\yfcst_python\flask_templete\django_admin\django_admin\settings.py changed, reloading.
+INFO 2024-08-15 14:08:23,573 autoreload Watching for file changes with StatReloader
+INFO 2024-08-15 14:08:29,985 basehttp "OPTIONS /admin/login HTTP/1.1" 200 0
+WARNING 2024-08-15 14:08:30,016 log Not Found: /admin/login
+WARNING 2024-08-15 14:08:30,017 basehttp "POST /admin/login HTTP/1.1" 404 2363
+INFO 2024-08-15 14:08:50,316 basehttp "OPTIONS /admin/login HTTP/1.1" 200 0
+WARNING 2024-08-15 14:08:50,330 log Not Found: /admin/login
+WARNING 2024-08-15 14:08:50,331 basehttp "POST /admin/login HTTP/1.1" 404 2363
+INFO 2024-08-15 14:09:51,783 basehttp "OPTIONS /admin/login// HTTP/1.1" 200 0
+WARNING 2024-08-15 14:09:51,799 log Not Found: /admin/login//
+WARNING 2024-08-15 14:09:51,799 basehttp "POST /admin/login// HTTP/1.1" 404 2369
+INFO 2024-08-15 14:10:06,513 basehttp "OPTIONS /admin/login/ HTTP/1.1" 200 0
+WARNING 2024-08-15 14:10:06,876 log Unauthorized: /admin/login/
+WARNING 2024-08-15 14:10:06,877 basehttp "POST /admin/login/ HTTP/1.1" 401 76
+INFO 2024-08-15 14:10:30,417 autoreload D:\soft\pythonProject\yfcst_python\flask_templete\django_admin\auth2\urls.py changed, reloading.
+INFO 2024-08-15 14:10:31,497 autoreload Watching for file changes with StatReloader
+INFO 2024-08-15 14:11:43,458 basehttp "OPTIONS /admin/login HTTP/1.1" 200 0
+WARNING 2024-08-15 14:11:43,850 log Unauthorized: /admin/login
+WARNING 2024-08-15 14:11:43,850 basehttp "POST /admin/login HTTP/1.1" 401 76
+INFO 2024-08-15 14:15:49,981 autoreload D:\soft\pythonProject\yfcst_python\flask_templete\django_admin\auth2\views.py changed, reloading.
+INFO 2024-08-15 14:15:51,121 autoreload Watching for file changes with StatReloader
+INFO 2024-08-15 14:18:55,567 autoreload D:\soft\pythonProject\yfcst_python\flask_templete\django_admin\common\response.py changed, reloading.
+INFO 2024-08-15 14:18:56,688 autoreload Watching for file changes with StatReloader
+INFO 2024-08-15 14:43:05,102 basehttp "OPTIONS /admin/register HTTP/1.1" 200 0
+ERROR 2024-08-15 14:43:05,543 log Internal Server Error: /admin/register
+Traceback (most recent call last):
+  File "D:\soft\python3.11.4\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\soft\python3.11.4\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\soft\python3.11.4\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\soft\pythonProject\yfcst_python\flask_templete\django_admin\auth2\views.py", line 24, in register
+    return Result.success(message='User registered successfully', code=201)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\soft\pythonProject\yfcst_python\flask_templete\django_admin\common\response.py", line 20, in success
+    return cls(data=response_data, status=code)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\soft\pythonProject\yfcst_python\flask_templete\django_admin\common\response.py", line 11, in __init__
+    super().__init__(data=data, status=code, **kwargs)
+TypeError: django.http.response.JsonResponse.__init__() got multiple values for keyword argument 'status'
+ERROR 2024-08-15 14:43:05,548 basehttp "POST /admin/register HTTP/1.1" 500 87038
+INFO 2024-08-15 14:45:11,395 autoreload D:\soft\pythonProject\yfcst_python\flask_templete\django_admin\common\response.py changed, reloading.
+INFO 2024-08-15 14:45:12,538 autoreload Watching for file changes with StatReloader
+INFO 2024-08-15 14:45:18,286 autoreload Watching for file changes with StatReloader
+INFO 2024-08-15 14:45:22,169 basehttp "OPTIONS /admin/register HTTP/1.1" 200 0
+WARNING 2024-08-15 14:45:22,200 log Bad Request: /admin/register
+WARNING 2024-08-15 14:45:22,201 basehttp "POST /admin/register HTTP/1.1" 400 57
+INFO 2024-08-15 14:45:34,040 basehttp "OPTIONS /admin/login HTTP/1.1" 200 0
+INFO 2024-08-15 14:45:34,399 basehttp "POST /admin/login HTTP/1.1" 200 54
+INFO 2024-08-15 14:47:34,120 basehttp "OPTIONS /admin/login HTTP/1.1" 200 0
+INFO 2024-08-15 14:47:34,795 basehttp "POST /admin/login HTTP/1.1" 200 54
+INFO 2024-08-15 14:50:17,906 autoreload D:\soft\pythonProject\yfcst_python\flask_templete\django_admin\auth2\views.py changed, reloading.
+INFO 2024-08-15 14:50:18,968 autoreload Watching for file changes with StatReloader
+INFO 2024-08-15 14:53:56,677 autoreload D:\soft\pythonProject\yfcst_python\flask_templete\django_admin\auth2\views.py changed, reloading.
+INFO 2024-08-15 14:53:57,759 autoreload Watching for file changes with StatReloader
+INFO 2024-08-15 14:55:37,811 autoreload D:\soft\pythonProject\yfcst_python\flask_templete\django_admin\django_admin\settings.py changed, reloading.
+INFO 2024-08-15 14:55:39,094 autoreload Watching for file changes with StatReloader
+INFO 2024-08-15 14:55:48,708 autoreload D:\soft\pythonProject\yfcst_python\flask_templete\django_admin\django_admin\settings.py changed, reloading.
+INFO 2024-08-15 14:55:50,048 autoreload Watching for file changes with StatReloader
+INFO 2024-08-15 14:56:07,219 autoreload D:\soft\pythonProject\yfcst_python\flask_templete\django_admin\django_admin\settings.py changed, reloading.
+INFO 2024-08-15 14:56:08,419 autoreload Watching for file changes with StatReloader
+INFO 2024-08-15 14:56:36,488 autoreload D:\soft\pythonProject\yfcst_python\flask_templete\django_admin\django_admin\settings.py changed, reloading.
+INFO 2024-08-15 14:56:37,754 autoreload Watching for file changes with StatReloader
+INFO 2024-08-15 14:57:26,799 autoreload D:\soft\pythonProject\yfcst_python\flask_templete\django_admin\auth2\views.py changed, reloading.
+INFO 2024-08-15 14:57:28,030 autoreload Watching for file changes with StatReloader
+INFO 2024-08-15 14:59:47,275 autoreload D:\soft\pythonProject\yfcst_python\flask_templete\django_admin\auth2\views.py changed, reloading.
+INFO 2024-08-15 14:59:48,517 autoreload Watching for file changes with StatReloader
+INFO 2024-08-15 14:59:59,604 basehttp "OPTIONS /admin/login HTTP/1.1" 200 0
+INFO 2024-08-15 15:00:00,236 basehttp "POST /admin/login HTTP/1.1" 200 174
+INFO 2024-08-15 15:03:09,912 autoreload D:\soft\pythonProject\yfcst_python\flask_templete\django_admin\auth2\views.py changed, reloading.
+INFO 2024-08-15 15:03:11,252 autoreload Watching for file changes with StatReloader
+INFO 2024-08-15 15:03:11,874 basehttp "OPTIONS /admin/login HTTP/1.1" 200 0
+INFO 2024-08-15 15:03:12,412 basehttp "POST /admin/login HTTP/1.1" 200 193
+INFO 2024-08-15 15:03:32,344 autoreload D:\soft\pythonProject\yfcst_python\flask_templete\django_admin\auth2\views.py changed, reloading.
+INFO 2024-08-15 15:03:33,550 autoreload Watching for file changes with StatReloader
+INFO 2024-08-15 15:03:33,907 basehttp "OPTIONS /admin/login HTTP/1.1" 200 0
+INFO 2024-08-15 15:03:34,416 basehttp "POST /admin/login HTTP/1.1" 200 198
+INFO 2024-08-15 15:06:00,723 autoreload D:\soft\pythonProject\yfcst_python\flask_templete\django_admin\auth2\views.py changed, reloading.
+INFO 2024-08-15 15:06:01,962 autoreload Watching for file changes with StatReloader
+INFO 2024-08-15 15:06:05,067 autoreload D:\soft\pythonProject\yfcst_python\flask_templete\django_admin\auth2\views.py changed, reloading.
+INFO 2024-08-15 15:06:06,345 autoreload Watching for file changes with StatReloader
+INFO 2024-08-15 15:06:11,737 autoreload D:\soft\pythonProject\yfcst_python\flask_templete\django_admin\auth2\views.py changed, reloading.
+INFO 2024-08-15 15:06:12,914 autoreload Watching for file changes with StatReloader
+INFO 2024-08-15 15:06:59,318 autoreload D:\soft\pythonProject\yfcst_python\flask_templete\django_admin\auth2\views.py changed, reloading.
+INFO 2024-08-15 15:07:00,556 autoreload Watching for file changes with StatReloader
+INFO 2024-08-15 15:09:27,201 autoreload D:\soft\pythonProject\yfcst_python\flask_templete\django_admin\auth2\views.py changed, reloading.
+INFO 2024-08-15 15:09:28,636 autoreload Watching for file changes with StatReloader
+INFO 2024-08-15 15:09:51,690 autoreload D:\soft\pythonProject\yfcst_python\flask_templete\django_admin\auth2\views.py changed, reloading.
+INFO 2024-08-15 15:09:53,073 autoreload Watching for file changes with StatReloader
+INFO 2024-08-15 15:11:06,542 autoreload D:\soft\pythonProject\yfcst_python\flask_templete\django_admin\auth2\views.py changed, reloading.
+INFO 2024-08-15 15:11:07,916 autoreload Watching for file changes with StatReloader
+INFO 2024-08-15 15:11:50,865 autoreload D:\soft\pythonProject\yfcst_python\flask_templete\django_admin\auth2\utils.py changed, reloading.
+INFO 2024-08-15 15:11:52,124 autoreload Watching for file changes with StatReloader
+INFO 2024-08-15 15:13:08,945 basehttp "OPTIONS /admin/login HTTP/1.1" 200 0
+ERROR 2024-08-15 15:13:09,306 log Internal Server Error: /admin/login
+Traceback (most recent call last):
+  File "D:\soft\python3.11.4\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\soft\python3.11.4\Lib\site-packages\django\db\backends\mysql\base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\soft\python3.11.4\Lib\site-packages\MySQLdb\cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\soft\python3.11.4\Lib\site-packages\MySQLdb\cursors.py", line 330, in _query
+    db.query(q)
+  File "D:\soft\python3.11.4\Lib\site-packages\MySQLdb\connections.py", line 257, in query
+    _mysql.connection.query(self, query)
+MySQLdb.ProgrammingError: (1146, "Table 'flask_admin.oauth2_provider_accesstoken' doesn't exist")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\soft\python3.11.4\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\soft\python3.11.4\Lib\site-packages\oauth2_provider\middleware.py", line 39, in __call__
+    user = authenticate(request=request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\soft\python3.11.4\Lib\site-packages\django\views\decorators\debug.py", line 75, in sensitive_variables_wrapper
+    return func(*func_args, **func_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\soft\python3.11.4\Lib\site-packages\django\contrib\auth\__init__.py", line 79, in authenticate
+    user = backend.authenticate(request, **credentials)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\soft\python3.11.4\Lib\site-packages\oauth2_provider\backends.py", line 19, in authenticate
+    valid, request = OAuthLibCore.verify_request(request, scopes=[])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\soft\python3.11.4\Lib\site-packages\oauth2_provider\oauth2_backends.py", line 207, in verify_request
+    valid, r = self.server.verify_request(uri, http_method, body, headers, scopes=scopes)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\soft\python3.11.4\Lib\site-packages\oauthlib\oauth2\rfc6749\endpoints\base.py", line 112, in wrapper
+    return f(endpoint, uri, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\soft\python3.11.4\Lib\site-packages\oauthlib\oauth2\rfc6749\endpoints\resource.py", line 72, in verify_request
+    return token_type_handler.validate_request(request), request
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\soft\python3.11.4\Lib\site-packages\oauthlib\oauth2\rfc6749\tokens.py", line 343, in validate_request
+    return self.request_validator.validate_bearer_token(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\soft\python3.11.4\Lib\site-packages\oauth2_provider\oauth2_validators.py", line 443, in validate_bearer_token
+    access_token = self._load_access_token(token)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\soft\python3.11.4\Lib\site-packages\oauth2_provider\oauth2_validators.py", line 465, in _load_access_token
+    return AccessToken.objects.select_related("application", "user").filter(token=token).first()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\soft\python3.11.4\Lib\site-packages\django\db\models\query.py", line 1097, in first
+    for obj in queryset[:1]:
+  File "D:\soft\python3.11.4\Lib\site-packages\django\db\models\query.py", line 400, in __iter__
+    self._fetch_all()
+  File "D:\soft\python3.11.4\Lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\soft\python3.11.4\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\soft\python3.11.4\Lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\soft\python3.11.4\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\soft\python3.11.4\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\soft\python3.11.4\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\soft\python3.11.4\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "D:\soft\python3.11.4\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\soft\python3.11.4\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\soft\python3.11.4\Lib\site-packages\django\db\backends\mysql\base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\soft\python3.11.4\Lib\site-packages\MySQLdb\cursors.py", line 179, in execute
+    res = self._query(mogrified_query)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\soft\python3.11.4\Lib\site-packages\MySQLdb\cursors.py", line 330, in _query
+    db.query(q)
+  File "D:\soft\python3.11.4\Lib\site-packages\MySQLdb\connections.py", line 257, in query
+    _mysql.connection.query(self, query)
+django.db.utils.ProgrammingError: (1146, "Table 'flask_admin.oauth2_provider_accesstoken' doesn't exist")
+ERROR 2024-08-15 15:13:09,325 basehttp "POST /admin/login HTTP/1.1" 500 252448
+INFO 2024-08-15 15:13:50,401 autoreload Watching for file changes with StatReloader
+INFO 2024-08-15 15:13:54,370 basehttp "OPTIONS /admin/login HTTP/1.1" 200 0
+INFO 2024-08-15 15:13:54,981 basehttp "POST /admin/login HTTP/1.1" 200 198
+INFO 2024-08-15 15:14:20,163 basehttp "OPTIONS /admin/login HTTP/1.1" 200 0
+INFO 2024-08-15 15:14:20,542 basehttp "POST /admin/login HTTP/1.1" 200 198
+INFO 2024-08-15 15:14:51,939 autoreload Watching for file changes with StatReloader
+INFO 2024-08-15 15:14:58,350 basehttp "OPTIONS /admin/login HTTP/1.1" 200 0
+INFO 2024-08-15 15:14:58,908 basehttp "POST /admin/login HTTP/1.1" 200 45
+INFO 2024-08-15 15:15:09,546 basehttp "OPTIONS /admin/login HTTP/1.1" 200 0
+INFO 2024-08-15 15:15:09,919 basehttp "POST /admin/login HTTP/1.1" 200 45
+INFO 2024-08-15 15:15:30,841 basehttp "OPTIONS /admin/login HTTP/1.1" 200 0
+INFO 2024-08-15 15:15:31,504 basehttp "POST /admin/login HTTP/1.1" 200 45
+INFO 2024-08-15 15:15:47,994 basehttp "OPTIONS /admin/login HTTP/1.1" 200 0
+INFO 2024-08-15 15:15:48,612 basehttp "POST /admin/login HTTP/1.1" 200 45
+INFO 2024-08-15 15:16:23,064 basehttp "OPTIONS /admin/login HTTP/1.1" 200 0
+INFO 2024-08-15 15:16:23,657 basehttp "POST /admin/login HTTP/1.1" 200 45
+INFO 2024-08-15 15:20:58,423 basehttp "OPTIONS /admin/login HTTP/1.1" 200 0
+INFO 2024-08-15 15:20:59,007 basehttp "POST /admin/login HTTP/1.1" 200 45
+INFO 2024-08-15 15:22:04,945 basehttp "OPTIONS /admin/login HTTP/1.1" 200 0
+INFO 2024-08-15 15:22:05,581 basehttp "POST /admin/login HTTP/1.1" 200 45
+INFO 2024-08-15 15:23:02,675 basehttp "OPTIONS /admin/login HTTP/1.1" 200 0
+INFO 2024-08-15 15:23:03,271 basehttp "POST /admin/login HTTP/1.1" 200 45
+INFO 2024-08-15 15:23:15,705 basehttp "OPTIONS /admin/login HTTP/1.1" 200 0
+INFO 2024-08-15 15:23:16,072 basehttp "POST /admin/login HTTP/1.1" 200 45
+WARNING 2024-08-15 15:25:29,810 log Unauthorized: /admin/login
+WARNING 2024-08-15 15:25:29,811 basehttp "POST /admin/login HTTP/1.1" 401 57
+INFO 2024-08-15 15:26:16,993 autoreload D:\soft\pythonProject\yfcst_python\flask_templete\django_admin\auth2\views.py changed, reloading.
+INFO 2024-08-15 15:26:18,279 autoreload Watching for file changes with StatReloader
+INFO 2024-08-15 15:27:47,134 autoreload D:\soft\pythonProject\yfcst_python\flask_templete\django_admin\auth2\views.py changed, reloading.
+INFO 2024-08-15 15:27:48,748 autoreload Watching for file changes with StatReloader
+WARNING 2024-08-15 15:34:29,565 log Unauthorized: /admin/login
+WARNING 2024-08-15 15:34:29,567 basehttp "POST /admin/login HTTP/1.1" 401 68
+INFO 2024-08-15 15:45:35,882 autoreload D:\soft\pythonProject\yfcst_python\flask_templete\django_admin\auth2\utils.py changed, reloading.
+INFO 2024-08-15 15:45:37,624 autoreload Watching for file changes with StatReloader
+INFO 2024-08-15 15:46:24,406 autoreload D:\soft\pythonProject\yfcst_python\flask_templete\django_admin\common\response.py changed, reloading.
+INFO 2024-08-15 15:46:26,182 autoreload Watching for file changes with StatReloader
+INFO 2024-08-15 15:50:03,980 autoreload D:\soft\pythonProject\yfcst_python\flask_templete\django_admin\django_admin\settings.py changed, reloading.
+INFO 2024-08-15 15:50:05,642 autoreload Watching for file changes with StatReloader
+INFO 2024-08-15 15:54:13,000 autoreload D:\soft\pythonProject\yfcst_python\flask_templete\django_admin\manage.py changed, reloading.
+INFO 2024-08-15 15:54:14,949 autoreload Watching for file changes with StatReloader
+INFO 2024-09-10 17:57:26,406 autoreload Watching for file changes with StatReloader
+INFO 2024-09-10 17:57:44,838 basehttp "OPTIONS /admin/login HTTP/1.1" 200 0
+WARNING 2024-09-10 17:57:45,693 log Unauthorized: /admin/login
+WARNING 2024-09-10 17:57:45,694 basehttp "POST /admin/login HTTP/1.1" 401 68
+INFO 2024-09-10 17:58:04,626 basehttp "OPTIONS /admin/register HTTP/1.1" 200 0
+INFO 2024-09-10 17:58:05,130 basehttp "POST /admin/register HTTP/1.1" 201 62
+INFO 2024-09-10 17:58:24,183 basehttp "OPTIONS /admin/register HTTP/1.1" 200 0
+WARNING 2024-09-10 17:58:24,244 log Bad Request: /admin/register
+WARNING 2024-09-10 17:58:24,245 basehttp "POST /admin/register HTTP/1.1" 400 68
+INFO 2024-09-10 17:58:30,264 basehttp "OPTIONS /admin/register HTTP/1.1" 200 0
+INFO 2024-09-10 17:58:30,862 basehttp "POST /admin/register HTTP/1.1" 201 62
+INFO 2024-09-10 17:59:33,479 autoreload D:\soft\pythonProject\yfcst_python\project_templete\django_admin\auth2\views.py changed, reloading.
+INFO 2024-09-10 17:59:34,615 autoreload Watching for file changes with StatReloader
+INFO 2024-09-10 17:59:39,306 basehttp "OPTIONS /admin/register HTTP/1.1" 200 0
+WARNING 2024-09-10 17:59:39,574 log Bad Request: /admin/register
+WARNING 2024-09-10 17:59:39,575 basehttp "POST /admin/register HTTP/1.1" 400 68
+INFO 2024-09-10 18:21:50,812 basehttp "OPTIONS /admin/login HTTP/1.1" 200 0
+INFO 2024-09-10 18:21:51,379 basehttp "POST /admin/login HTTP/1.1" 200 45
+WARNING 2024-09-10 18:23:00,930 log Unauthorized: /admin/login
+WARNING 2024-09-10 18:23:00,931 basehttp "POST /admin/login HTTP/1.1" 401 68
+WARNING 2024-09-10 18:23:22,052 log Unauthorized: /admin/login
+WARNING 2024-09-10 18:23:22,053 basehttp "POST /admin/login HTTP/1.1" 401 68
+INFO 2024-09-10 18:25:23,158 autoreload D:\soft\pythonProject\yfcst_python\project_templete\django_admin\auth2\views.py changed, reloading.
+INFO 2024-09-10 18:25:24,266 autoreload Watching for file changes with StatReloader
+WARNING 2024-09-10 18:25:28,962 log Unauthorized: /admin/login
+WARNING 2024-09-10 18:25:28,963 basehttp "POST /admin/login HTTP/1.1" 401 62
+INFO 2024-09-10 18:26:08,654 autoreload D:\soft\pythonProject\yfcst_python\project_templete\django_admin\auth2\views.py changed, reloading.
+INFO 2024-09-10 18:26:09,873 autoreload Watching for file changes with StatReloader
+INFO 2024-09-10 18:26:11,352 basehttp "OPTIONS /admin/login HTTP/1.1" 200 0
+ERROR 2024-09-10 18:26:12,257 log Internal Server Error: /admin/login
+Traceback (most recent call last):
+  File "D:\soft\python3.11.4\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\soft\python3.11.4\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\soft\python3.11.4\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\soft\pythonProject\yfcst_python\project_templete\django_admin\auth2\views.py", line 49, in login
+    return Result.error(msg="ÃÜÂë´íÎó", code=401)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Result.error() got an unexpected keyword argument 'msg'
+ERROR 2024-09-10 18:26:12,262 basehttp "POST /admin/login HTTP/1.1" 500 79296
+INFO 2024-09-10 18:26:37,941 autoreload D:\soft\pythonProject\yfcst_python\project_templete\django_admin\auth2\views.py changed, reloading.
+INFO 2024-09-10 18:26:39,144 autoreload Watching for file changes with StatReloader
+INFO 2024-09-10 18:26:40,048 basehttp "OPTIONS /admin/login HTTP/1.1" 200 0
+WARNING 2024-09-10 18:26:40,728 log Unauthorized: /admin/login
+WARNING 2024-09-10 18:26:40,729 basehttp "POST /admin/login HTTP/1.1" 401 62
+INFO 2024-09-10 18:26:45,221 basehttp "OPTIONS /admin/login HTTP/1.1" 200 0
+WARNING 2024-09-10 18:26:45,829 log Unauthorized: /admin/login
+WARNING 2024-09-10 18:26:45,830 basehttp "POST /admin/login HTTP/1.1" 401 62
+INFO 2024-09-10 18:26:52,240 basehttp "OPTIONS /admin/login HTTP/1.1" 200 0
+WARNING 2024-09-10 18:26:52,297 log Not Found: /admin/login
+WARNING 2024-09-10 18:26:52,298 basehttp "POST /admin/login HTTP/1.1" 404 68
+INFO 2024-09-10 18:27:42,961 basehttp "OPTIONS /admin/login HTTP/1.1" 200 0
+WARNING 2024-09-10 18:27:43,014 log Not Found: /admin/login
+WARNING 2024-09-10 18:27:43,014 basehttp "POST /admin/login HTTP/1.1" 404 68
+INFO 2024-09-10 18:28:10,942 basehttp "OPTIONS /admin/login HTTP/1.1" 200 0
+WARNING 2024-09-10 18:28:11,040 log Not Found: /admin/login
+WARNING 2024-09-10 18:28:11,041 basehttp "POST /admin/login HTTP/1.1" 404 68
+INFO 2024-09-10 18:28:50,959 basehttp "OPTIONS /admin/login HTTP/1.1" 200 0
+ERROR 2024-09-10 18:28:51,516 log Internal Server Error: /admin/login
+Traceback (most recent call last):
+  File "D:\soft\python3.11.4\Lib\site-packages\django\contrib\auth\__init__.py", line 129, in login
+    backend = backend or user.backend
+                         ^^^^^^^^^^^^
+AttributeError: 'User' object has no attribute 'backend'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\soft\python3.11.4\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\soft\python3.11.4\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\soft\python3.11.4\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\soft\pythonProject\yfcst_python\project_templete\django_admin\auth2\views.py", line 50, in login
+    auth_login(request, user)
+  File "D:\soft\python3.11.4\Lib\site-packages\django\contrib\auth\__init__.py", line 135, in login
+    raise ValueError(
+ValueError: You have multiple authentication backends configured and therefore must provide the `backend` argument or set the `backend` attribute on the user.
+ERROR 2024-09-10 18:28:51,521 basehttp "POST /admin/login HTTP/1.1" 500 89054
+INFO 2024-09-10 18:29:21,556 autoreload D:\soft\pythonProject\yfcst_python\project_templete\django_admin\auth2\views.py changed, reloading.
+INFO 2024-09-10 18:29:22,768 autoreload Watching for file changes with StatReloader
+INFO 2024-09-10 18:29:25,841 basehttp "OPTIONS /admin/login HTTP/1.1" 200 0
+INFO 2024-09-10 18:29:26,660 basehttp "POST /admin/login HTTP/1.1" 200 62
+INFO 2024-09-10 18:29:33,109 basehttp "OPTIONS /admin/login HTTP/1.1" 200 0
+WARNING 2024-09-10 18:29:33,174 log Not Found: /admin/login
+WARNING 2024-09-10 18:29:33,174 basehttp "POST /admin/login HTTP/1.1" 404 68
+INFO 2024-09-10 18:34:25,628 autoreload D:\soft\pythonProject\yfcst_python\project_templete\django_admin\common\response.py changed, reloading.
+INFO 2024-09-10 18:34:26,868 autoreload Watching for file changes with StatReloader
+INFO 2024-09-10 18:34:30,598 basehttp "OPTIONS /admin/login HTTP/1.1" 200 0
+WARNING 2024-09-10 18:34:30,873 log Bad Request: /admin/login
+WARNING 2024-09-10 18:34:30,873 basehttp "POST /admin/login HTTP/1.1" 400 68
+INFO 2024-09-10 18:34:53,633 autoreload D:\soft\pythonProject\yfcst_python\project_templete\django_admin\common\response.py changed, reloading.
+INFO 2024-09-10 18:34:54,710 autoreload Watching for file changes with StatReloader
+INFO 2024-09-10 18:34:57,193 basehttp "OPTIONS /admin/login HTTP/1.1" 200 0
+INFO 2024-09-10 18:34:57,437 basehttp "POST /admin/login HTTP/1.1" 200 68
+INFO 2024-09-10 18:38:10,619 basehttp "OPTIONS /admin/login HTTP/1.1" 200 0
+INFO 2024-09-10 18:38:10,690 basehttp "POST /admin/login HTTP/1.1" 200 68
+INFO 2024-09-10 18:38:28,755 basehttp "OPTIONS /admin/login HTTP/1.1" 200 0
+INFO 2024-09-10 18:38:29,260 basehttp "POST /admin/login HTTP/1.1" 200 62
+INFO 2024-09-10 18:38:53,962 basehttp "OPTIONS /admin/login HTTP/1.1" 200 0
+INFO 2024-09-10 18:38:54,463 basehttp "POST /admin/login HTTP/1.1" 200 62
+INFO 2024-09-10 18:39:00,692 basehttp "OPTIONS /admin/login HTTP/1.1" 200 0
+INFO 2024-09-10 18:39:01,262 basehttp "POST /admin/login HTTP/1.1" 200 62
+INFO 2024-09-10 18:39:29,441 basehttp "OPTIONS /admin/login HTTP/1.1" 200 0
+INFO 2024-09-10 18:39:29,981 basehttp "POST /admin/login HTTP/1.1" 200 62
+INFO 2024-09-10 18:40:40,417 basehttp "OPTIONS /admin/login HTTP/1.1" 200 0
+INFO 2024-09-10 18:40:40,908 basehttp "POST /admin/login HTTP/1.1" 200 62
+INFO 2024-09-10 18:41:08,485 basehttp "OPTIONS /admin/login HTTP/1.1" 200 0
+INFO 2024-09-10 18:41:09,003 basehttp "POST /admin/login HTTP/1.1" 200 62
+INFO 2024-09-10 18:41:14,767 basehttp "OPTIONS /admin/login HTTP/1.1" 200 0
+INFO 2024-09-10 18:41:15,286 basehttp "POST /admin/login HTTP/1.1" 200 62
+INFO 2024-09-10 18:43:22,486 autoreload D:\soft\pythonProject\yfcst_python\project_templete\django_admin\common\response.py changed, reloading.
+INFO 2024-09-10 18:43:23,644 autoreload Watching for file changes with StatReloader
+INFO 2024-09-11 10:44:54,494 autoreload Watching for file changes with StatReloader
+INFO 2024-09-11 10:54:58,506 autoreload D:\soft\pythonProject\yfcst_python\project_templete\django_admin\auth2\utils.py changed, reloading.
+INFO 2024-09-11 10:54:59,689 autoreload Watching for file changes with StatReloader
+INFO 2024-09-11 10:55:33,116 autoreload D:\soft\pythonProject\yfcst_python\project_templete\django_admin\auth2\utils.py changed, reloading.
+INFO 2024-09-11 10:55:34,209 autoreload Watching for file changes with StatReloader
+INFO 2024-09-11 10:55:48,100 autoreload D:\soft\pythonProject\yfcst_python\project_templete\django_admin\auth2\utils.py changed, reloading.
+INFO 2024-09-11 10:55:49,202 autoreload Watching for file changes with StatReloader
+INFO 2024-09-11 10:56:56,310 autoreload D:\soft\pythonProject\yfcst_python\project_templete\django_admin\auth2\utils.py changed, reloading.
+INFO 2024-09-11 10:56:57,420 autoreload Watching for file changes with StatReloader
+INFO 2024-09-11 10:58:30,219 autoreload D:\soft\pythonProject\yfcst_python\project_templete\django_admin\auth2\utils.py changed, reloading.
+INFO 2024-09-11 10:58:31,254 autoreload Watching for file changes with StatReloader
+INFO 2024-09-11 10:58:47,283 autoreload D:\soft\pythonProject\yfcst_python\project_templete\django_admin\auth2\utils.py changed, reloading.
+INFO 2024-09-11 10:58:48,542 autoreload Watching for file changes with StatReloader
+INFO 2024-09-11 11:12:25,813 autoreload D:\soft\pythonProject\yfcst_python\project_templete\django_admin\auth2\utils.py changed, reloading.
+INFO 2024-09-11 11:12:27,084 autoreload Watching for file changes with StatReloader
+INFO 2024-09-11 11:15:00,582 autoreload D:\soft\pythonProject\yfcst_python\project_templete\django_admin\auth2\utils.py changed, reloading.
+INFO 2024-09-11 11:15:01,640 autoreload Watching for file changes with StatReloader
+INFO 2024-09-11 11:16:48,890 autoreload D:\soft\pythonProject\yfcst_python\project_templete\django_admin\auth2\utils.py changed, reloading.
+INFO 2024-09-11 11:16:49,995 autoreload Watching for file changes with StatReloader
+INFO 2024-09-11 11:17:08,671 autoreload D:\soft\pythonProject\yfcst_python\project_templete\django_admin\auth2\utils.py changed, reloading.
+INFO 2024-09-11 11:17:09,830 autoreload Watching for file changes with StatReloader
+INFO 2024-09-11 11:18:53,379 autoreload D:\soft\pythonProject\yfcst_python\project_templete\django_admin\auth2\utils.py changed, reloading.
+INFO 2024-09-11 11:18:54,644 autoreload Watching for file changes with StatReloader
+INFO 2024-09-11 11:20:19,192 autoreload D:\soft\pythonProject\yfcst_python\project_templete\django_admin\auth2\utils.py changed, reloading.
+INFO 2024-09-11 11:20:20,301 autoreload Watching for file changes with StatReloader
+INFO 2024-09-11 11:24:03,133 autoreload D:\soft\pythonProject\yfcst_python\project_templete\django_admin\auth2\utils.py changed, reloading.
+INFO 2024-09-11 11:24:04,272 autoreload Watching for file changes with StatReloader
+INFO 2024-09-11 11:24:36,260 autoreload D:\soft\pythonProject\yfcst_python\project_templete\django_admin\auth2\views.py changed, reloading.
+INFO 2024-09-11 11:24:37,242 autoreload Watching for file changes with StatReloader
+INFO 2024-09-11 11:24:49,509 basehttp "OPTIONS /admin/login HTTP/1.1" 200 0
+INFO 2024-09-11 11:24:50,463 basehttp "POST /admin/login HTTP/1.1" 200 48
+INFO 2024-09-11 14:41:26,287 autoreload D:\soft\pythonProject\yfcst_python\project_templete\django_admin\auth2\views.py changed, reloading.
+INFO 2024-09-11 14:41:27,303 autoreload Watching for file changes with StatReloader
+INFO 2024-09-11 14:41:47,992 basehttp "OPTIONS /admin/login HTTP/1.1" 200 0
+ERROR 2024-09-11 14:41:48,909 log Internal Server Error: /admin/login
+Traceback (most recent call last):
+  File "D:\soft\python3.11.4\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\soft\python3.11.4\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\soft\python3.11.4\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\soft\pythonProject\yfcst_python\project_templete\django_admin\auth2\views.py", line 52, in login
+    response = Result.success(message="µÇÂ¼³É¹¦",data=user,  code=200)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\soft\pythonProject\yfcst_python\project_templete\django_admin\common\response.py", line 32, in success
+    return cls(data=response_data, code=code, status=status)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\soft\pythonProject\yfcst_python\project_templete\django_admin\common\response.py", line 14, in __init__
+    super().__init__(data=data, **kwargs)
+  File "D:\soft\python3.11.4\Lib\site-packages\django\http\response.py", line 733, in __init__
+    data = json.dumps(data, cls=encoder, **json_dumps_params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\soft\python3.11.4\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "D:\soft\python3.11.4\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\soft\python3.11.4\Lib\json\encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+  File "D:\soft\python3.11.4\Lib\site-packages\django\core\serializers\json.py", line 106, in default
+    return super().default(o)
+           ^^^^^^^^^^^^^^^^^^
+  File "D:\soft\python3.11.4\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type User is not JSON serializable
+ERROR 2024-09-11 14:41:48,917 basehttp "POST /admin/login HTTP/1.1" 500 114934
+INFO 2024-09-11 14:43:02,310 autoreload D:\soft\pythonProject\yfcst_python\project_templete\django_admin\auth2\views.py changed, reloading.
+INFO 2024-09-11 14:43:03,146 autoreload Watching for file changes with StatReloader
+INFO 2024-09-11 14:43:33,013 autoreload D:\soft\pythonProject\yfcst_python\project_templete\django_admin\auth2\views.py changed, reloading.
+INFO 2024-09-11 14:43:33,824 autoreload Watching for file changes with StatReloader
+INFO 2024-09-11 14:43:38,392 basehttp "OPTIONS /admin/login HTTP/1.1" 200 0
+INFO 2024-09-11 14:43:38,900 basehttp "POST /admin/login HTTP/1.1" 200 101
+INFO 2024-09-11 14:48:41,035 autoreload D:\soft\pythonProject\yfcst_python\project_templete\django_admin\common\response.py changed, reloading.
+INFO 2024-09-11 14:48:41,878 autoreload Watching for file changes with StatReloader
+INFO 2024-09-11 14:48:53,356 autoreload D:\soft\pythonProject\yfcst_python\project_templete\django_admin\common\response.py changed, reloading.
+INFO 2024-09-11 14:48:54,310 autoreload Watching for file changes with StatReloader
+INFO 2024-09-11 14:51:23,320 autoreload D:\soft\pythonProject\yfcst_python\project_templete\django_admin\common\response.py changed, reloading.
+INFO 2024-09-11 14:51:24,292 autoreload Watching for file changes with StatReloader
+INFO 2024-09-11 14:51:45,256 autoreload D:\soft\pythonProject\yfcst_python\project_templete\django_admin\auth2\views.py changed, reloading.
+INFO 2024-09-11 14:51:46,063 autoreload Watching for file changes with StatReloader
+INFO 2024-09-11 14:53:50,323 autoreload D:\soft\pythonProject\yfcst_python\project_templete\django_admin\auth2\views.py changed, reloading.
+INFO 2024-09-11 14:53:51,172 autoreload Watching for file changes with StatReloader
+INFO 2024-09-11 14:54:39,549 basehttp "OPTIONS /admin/login HTTP/1.1" 200 0
+INFO 2024-09-11 14:54:40,421 basehttp "POST /admin/login HTTP/1.1" 200 105
+INFO 2024-09-11 14:57:04,273 basehttp "OPTIONS /admin/login HTTP/1.1" 200 0
+INFO 2024-09-11 14:57:04,820 basehttp "POST /admin/login HTTP/1.1" 200 105
+INFO 2024-09-11 14:57:36,673 basehttp "OPTIONS /admin/login HTTP/1.1" 200 0
+INFO 2024-09-11 14:57:37,324 basehttp "POST /admin/login HTTP/1.1" 200 105
+INFO 2024-09-11 14:58:17,329 basehttp "OPTIONS /admin/login HTTP/1.1" 200 0
+INFO 2024-09-11 14:58:17,889 basehttp "POST /admin/login HTTP/1.1" 200 105
+INFO 2024-09-11 14:58:50,452 basehttp "OPTIONS /admin/login HTTP/1.1" 200 0
+INFO 2024-09-11 14:58:51,037 basehttp "POST /admin/login HTTP/1.1" 200 105
+INFO 2024-09-11 14:59:10,670 basehttp "OPTIONS /admin/login HTTP/1.1" 200 0
+INFO 2024-09-11 14:59:11,243 basehttp "POST /admin/login HTTP/1.1" 200 105
+INFO 2024-09-11 14:59:49,294 basehttp "OPTIONS /admin/login HTTP/1.1" 200 0
+INFO 2024-09-11 14:59:49,857 basehttp "POST /admin/login HTTP/1.1" 200 105
+INFO 2024-09-11 15:00:08,978 basehttp "OPTIONS /admin/login HTTP/1.1" 200 0
+INFO 2024-09-11 15:00:09,525 basehttp "POST /admin/login HTTP/1.1" 200 105
+INFO 2024-09-11 15:01:03,838 basehttp "GET /admin/login HTTP/1.1" 200 42
+INFO 2024-09-11 15:02:37,640 basehttp "OPTIONS /admin/login HTTP/1.1" 200 0
+INFO 2024-09-11 15:02:38,271 basehttp "POST /admin/login HTTP/1.1" 200 105
+INFO 2024-09-11 15:04:06,848 autoreload D:\soft\pythonProject\yfcst_python\project_templete\django_admin\auth2\views.py changed, reloading.
+INFO 2024-09-11 15:04:07,771 autoreload Watching for file changes with StatReloader
+INFO 2024-09-11 15:04:19,850 basehttp "OPTIONS /admin/login HTTP/1.1" 200 0
+ERROR 2024-09-11 15:04:20,769 log Internal Server Error: /admin/login
+Traceback (most recent call last):
+  File "D:\soft\python3.11.4\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\soft\python3.11.4\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\soft\python3.11.4\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\soft\pythonProject\yfcst_python\project_templete\django_admin\auth2\views.py", line 55, in login
+    logger.info(f"token: {token}")
+    ^^^^^^
+NameError: name 'logger' is not defined
+ERROR 2024-09-11 15:04:20,775 basehttp "POST /admin/login HTTP/1.1" 500 80167
+INFO 2024-09-11 15:04:29,414 autoreload D:\soft\pythonProject\yfcst_python\project_templete\django_admin\auth2\views.py changed, reloading.
+INFO 2024-09-11 15:04:30,293 autoreload Watching for file changes with StatReloader
+INFO 2024-09-11 15:04:34,081 basehttp "OPTIONS /admin/login HTTP/1.1" 200 0
+INFO 2024-09-11 15:04:34,627 basehttp "POST /admin/login HTTP/1.1" 200 105
+INFO 2024-09-11 15:09:25,959 autoreload D:\soft\pythonProject\yfcst_python\project_templete\django_admin\django_admin\settings.py changed, reloading.
+INFO 2024-09-11 15:10:34,628 autoreload Watching for file changes with StatReloader
+INFO 2024-09-11 15:10:38,119 basehttp "OPTIONS /admin/login HTTP/1.1" 200 0
+INFO 2024-09-11 15:10:38,674 basehttp "POST /admin/login HTTP/1.1" 200 105
+INFO 2024-09-11 15:13:35,635 basehttp "OPTIONS /admin/login HTTP/1.1" 200 0
+INFO 2024-09-11 15:13:36,207 basehttp "POST /admin/login HTTP/1.1" 200 105
+INFO 2024-09-11 15:16:44,874 basehttp "POST /admin/login HTTP/1.1" 200 105
+INFO 2024-09-11 15:21:38,759 autoreload D:\soft\pythonProject\yfcst_python\project_templete\django_admin\django_admin\settings.py changed, reloading.
+INFO 2024-09-11 15:21:39,684 autoreload Watching for file changes with StatReloader
+INFO 2024-09-11 15:21:50,992 basehttp "OPTIONS /admin/login HTTP/1.1" 200 0
+INFO 2024-09-11 15:21:51,914 basehttp "POST /admin/login HTTP/1.1" 200 105
+INFO 2024-09-11 15:22:49,016 basehttp "OPTIONS /admin/login HTTP/1.1" 200 0
+INFO 2024-09-11 15:22:49,586 basehttp "POST /admin/login HTTP/1.1" 200 105
+INFO 2024-09-11 15:56:38,597 basehttp "POST /admin/login HTTP/1.1" 200 105
+INFO 2024-09-11 16:02:18,893 basehttp "OPTIONS /admin/login HTTP/1.1" 200 0
+INFO 2024-09-11 16:02:19,559 basehttp "POST /admin/login HTTP/1.1" 200 105
