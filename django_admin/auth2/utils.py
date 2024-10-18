@@ -4,6 +4,7 @@ from functools import wraps
 import jwt
 from django.conf import settings
 from jwt.exceptions import ExpiredSignatureError, InvalidTokenError
+from loguru import logger
 
 # 时间阈值：快过期的判断标准（比如 5 分钟）
 REFRESH_THRESHOLD = datetime.timedelta(minutes=5)
@@ -55,7 +56,8 @@ def jwt_required(func):
     @wraps(func)
     def wrapper(request, *args, **kwargs):
         from common.response import Result
-        auth_header = request.META.get('HTTP_AUTHORIZATION')
+        # 获取请求头中的 Authorization 的值
+        auth_header = request.headers.get('Authorization', None)
         if auth_header and auth_header.startswith('Bearer '):
             token = auth_header.split(' ')[1]
             # 验证 token

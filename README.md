@@ -84,6 +84,7 @@ Ensure you have the following installed:
 
 3. Apply migrations and start the Django server:
    ```bash
+   python manage.py makemigrations
    python manage.py migrate
    python manage.py runserver
    ```

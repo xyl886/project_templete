@@ -72,8 +72,8 @@ JWT_AUTH = {
 }
 
 OAUTH2_PROVIDER = {
-    'ACCESS_TOKEN_EXPIRE_SECONDS': 36000,
-    'AUTHORIZATION_CODE_EXPIRE_SECONDS': 600,
+    'ACCESS_TOKEN_EXPIRE_SECONDS': 360000,
+    'AUTHORIZATION_CODE_EXPIRE_SECONDS': 600000,
     'OAUTH2_BACKEND_CLASS': 'oauth2_provider.oauth2_backends.JSONOAuthLibCore',
     'OAUTH2_VALIDATOR_CLASS': 'oauth2_provider.oauth2_validators.OAuth2Validator',
 }
@@ -131,8 +131,11 @@ INSTALLED_APPS = [
     'django.contrib.sites',  # For Django Allauth
     'corsheaders',
     'auth2',  # 你的应用
+    'drf_yasg',
 ]
-
+REST_FRAMEWORK = {
+    'EXCEPTION_HANDLER': 'django_admin.exceptions.custom_exception_handler',
+}
 MIDDLEWARE = [
     'oauth2_provider.middleware.OAuth2TokenMiddleware',
     'corsheaders.middleware.CorsMiddleware',
